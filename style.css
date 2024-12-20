@@ -1,0 +1,159 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: url("https://img.freepik.com/premium-photo/calendar-page-close-up-blue-background-business-planning-appointment-meeting-concept_293060-1467.jpg");
+  background-size: 110%;  /* Increase the width of the background image */
+}
+
+
+.calendar-container {
+  width: 350px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  transform: translateY(0);
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Change font for month and year */
+.month-year {
+  flex-grow: 1;
+  text-transform: capitalize;
+  font-family: 'Playfair Display', serif;  /* Changed font */
+  font-size: 1.4em;  /* Slightly larger for elegance */
+  font-weight: bold;  /* Making it bold */
+  color: #333;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #4A90E2;
+}
+
+.calendar-header button {
+  background-color: #4A90E2;
+  border: none;
+  font-size: 1em; /* Larger arrow */
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold; /* Bold the arrow */
+}
+
+.calendar-header button:hover {
+  background-color: #357ABD;
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Single Arrow Styling */
+.calendar-header .arrow:before {
+  content: '→'; /* Single right arrow */
+  font-size: 2em; /* Larger for prominence */
+  font-weight: bold;  /* Bold the arrow */
+}
+
+.calendar-header button:hover:before {
+  color: #357ABD;
+}
+
+.calendar {
+  margin-top: 20px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.day-name {
+  padding: 10px 0;
+  background-color: #E7F3FF;
+  border-radius: 50%;
+  color: #4A90E2;
+  font-size: 1.1em;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.day {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  background-color: #F9F9F9;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.day:hover {
+  background-color: #E7F3FF;
+  transform: scale(1.1);
+}
+
+.today {
+  background-color: #357ABD;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+.today :hover {
+    background-color: #073d74;
+    transform: scale(1.1);
+}
+
+.day.empty {
+  background-color: #f4f4f4;
+  pointer-events: none;
+}
+
+@media (max-width: 400px) {
+  .calendar-container {
+    width: 280px;
+  }
+
+  .calendar-header {
+    font-size: 1.2em;
+  }
+
+  .calendar-body {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
