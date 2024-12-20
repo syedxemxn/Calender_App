@@ -12,8 +12,6 @@ Welcome to the **Calendar App**! 🎉 This is a simple, interactive calendar tha
 4. [Live Demo](#-live-demo)
 5. [License](#-license)
 6. [Detailed Explanation](#-detailed-explanation)
-17. [Screenshots](#-screenshot)
-
 
 ---
 
@@ -124,14 +122,6 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 - **Animation**:
   - The **fadeIn** animation ensures the calendar appears smoothly when it’s loaded or when you navigate between months. ✨
-
----
-
-## 📋 Screenshot
-
-Here's a preview of what the calendar looks like:
-
-![Calendar Screenshot](https://example.com/screenshot.png) 📸
 
 ---
 
