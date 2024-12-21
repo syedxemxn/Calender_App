@@ -87,7 +87,7 @@ Open the `index.html` file in your preferred browser to view the calendar. 🖥�
 
 You can view a live demo of this calendar app by visiting this link:
 
-[Live Demo - Calendar App](https://github.com/syedxemxn/Calender_App.git) 🌟
+[Live Demo - Calendar App]( https://rm550.github.io/Calender_App/) 🌟
 
 ---
 
